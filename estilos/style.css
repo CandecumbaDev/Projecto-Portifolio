@@ -38,6 +38,9 @@ header {
   display: flex;
   justify-content: flex-end;
   align-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 nav#menu {
@@ -222,6 +225,7 @@ article#video .video-container {
   display: flex;
   flex-direction: column-reverse;
   gap: 20px;
+  padding: 10px;
 
 
 }
@@ -270,6 +274,21 @@ footer a:hover {
 }
 
 @media screen and (min-width 768px) {
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+  }
+
+  section#ficha {
+    grid-column: 2/3;
+    height: fit-content;
+    position: sticky;
+    top: 65px;
+  }
+
+  section#detalhe {
+    grid-column: 3/4;
+  }
+
   #skill-container {
     grid-template-column: 1fr 1fr;
   }
